@@ -1,0 +1,112 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #0f172a, #1e3a8a);
+    color: white;
+    text-align: center;
+    min-height: 100vh;
+    padding: 30px;
+}
+
+/* MAIN CONTAINER */
+.container {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    padding: 30px;
+    margin: auto;
+    width: 45%;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+/* TITLE */
+h1 {
+    margin-bottom: 10px;
+    font-size: 2.5rem;
+}
+
+/* SUBTEXT */
+p {
+    margin-bottom: 15px;
+    color: #dbeafe;
+}
+
+/* CARD DESIGN */
+.card {
+    background: rgba(255,255,255,0.1);
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+/* CARD TITLES */
+.card h2 {
+    margin-bottom: 15px;
+}
+
+/* INPUTS */
+input[type="file"],
+input[type="password"] {
+    display: block;
+    margin: 12px auto;
+    padding: 12px;
+    width: 80%;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+}
+
+/* BUTTONS */
+button {
+    margin-top: 10px;
+    padding: 12px 20px;
+    border-radius: 8px;
+    border: none;
+    background: #22c55e;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s ease;
+    box-shadow: 0 0 10px rgba(34,197,94,0.5);
+}
+
+/* BUTTON HOVER */
+button:hover {
+    background: #16a34a;
+    transform: scale(1.05);
+}
+
+/* WARNING */
+.warning {
+    color: #facc15;
+    margin-top: 10px;
+    font-size: 0.95rem;
+}
+
+/* MESSAGE */
+.message {
+    margin-top: 20px;
+    font-weight: bold;
+    color: #86efac;
+}
+
+/* FILE NAME */
+#filename {
+    color: #93c5fd;
+    font-size: 0.9rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+}

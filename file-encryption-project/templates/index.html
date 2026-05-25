@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Secure File Encryption Dashboard</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>🔐 Encryption Dashboard</h1>
+
+        <p>
+            Protect your files using AES encryption with password-based security
+        </p>
+
+        <!-- ENCRYPT CARD -->
+        <div class="card">
+
+            <h2>Encrypt File 🔒</h2>
+
+            <form 
+                action="/encrypt"
+                method="post"
+                enctype="multipart/form-data"
+                autocomplete="off"
+            >
+
+                <input 
+                    type="file" 
+                    name="file" 
+                    required
+                    onchange="showFileName(this)"
+                >
+
+                <p id="filename"></p>
+
+                <input 
+                    type="password" 
+                    name="password" 
+                    placeholder="Enter Password"
+                    autocomplete="off"
+                    spellcheck="false"
+                    required
+                >
+
+                <button 
+                    type="submit"
+                    onclick="this.innerText='Encrypting...'"
+                >
+                    Encrypt
+                </button>
+
+            </form>
+
+            <p class="warning">
+                ⚠️ Encrypted files cannot be opened without decryption
+            </p>
+
+        </div>
+
+        <!-- DECRYPT CARD -->
+        <div class="card">
+
+            <h2>Decrypt File 🔓</h2>
+
+            <form 
+                action="/decrypt"
+                method="post"
+                enctype="multipart/form-data"
+                autocomplete="off"
+            >
+
+                <input 
+                    type="file" 
+                    name="file" 
+                    required
+                >
+
+                <input 
+                    type="password" 
+                    name="password" 
+                    placeholder="Enter Password"
+                    autocomplete="off"
+                    spellcheck="false"
+                    required
+                >
+
+                <button 
+                    type="submit"
+                    onclick="this.innerText='Decrypting...'"
+                >
+                    Decrypt
+                </button>
+
+            </form>
+
+        </div>
+
+        <!-- LOGS BUTTON -->
+        <a href="/logs" target="_blank">
+            <button>
+                View Activity Logs 📊
+            </button>
+        </a>
+
+        <!-- LOGOUT BUTTON -->
+        <br><br>
+
+        <a href="/logout">
+            <button>
+                Logout 🚪
+            </button>
+        </a>
+
+        <!-- MESSAGE -->
+        {% if message %}
+            <p class="message">
+                {{ message }}
+            </p>
+        {% endif %}
+
+    </div>
+
+    <!-- JAVASCRIPT -->
+    <script>
+
+        function showFileName(input) {
+
+            document.getElementById("filename").innerText =
+                "Selected File: " + input.files[0].name;
+
+        }
+
+    </script>
+
+</body>
+</html>
