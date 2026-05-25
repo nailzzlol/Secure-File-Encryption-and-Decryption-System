@@ -31,3 +31,13 @@ Session-based access control
 Brute-force attack prevention (failed attempt limiting)
 Activity monitoring and logging
 Password-based encryption key generation
+
+Future Enhancements
+Email-based OTP delivery
+Multi-user authentication system
+AES encryption support
+Cloud file storage integration
+Deployment using Docker / Cloud services
+👩‍💻 Author
+
+Nailah Khan
