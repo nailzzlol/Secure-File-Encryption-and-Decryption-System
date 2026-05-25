@@ -1,0 +1,33 @@
+A secure file encryption and decryption system built using Python and Flask, designed to protect files through encryption, authentication, and access control mechanisms. The project implements secure file handling using cryptographic techniques and includes additional security features such as OTP verification, activity logging, and brute-force protection.
+
+🚀 Features
+
+✅ File Encryption & Decryption using Fernet encryption
+✅ Secure key generation using SHA-256 hashing
+✅ OTP-based user authentication
+✅ Login protection and session management
+✅ Failed attempt tracking and brute-force prevention
+✅ Activity logging for monitoring user actions
+✅ Secure file upload and download workflows
+
+🛠 Technologies Used
+Python
+Flask
+Cryptography (Fernet)
+SHA-256 Hashing
+HTML/CSS
+Session Management
+File Handling
+🧠 System Workflow
+User logs in using credentials
+OTP verification is performed for authentication
+User uploads a file for encryption/decryption
+Encryption key is generated using SHA-256
+Files are encrypted/decrypted using Fernet symmetric encryption
+System logs activities and tracks failed attempts for security
+🔒 Security Features
+OTP Authentication
+Session-based access control
+Brute-force attack prevention (failed attempt limiting)
+Activity monitoring and logging
+Password-based encryption key generation
